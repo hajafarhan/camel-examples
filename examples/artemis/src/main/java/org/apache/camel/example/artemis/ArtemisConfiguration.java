@@ -28,7 +28,7 @@ public class ArtemisConfiguration {
     @BindToRegistry("jms")
     public JmsComponent createArtemisComponent() {
         // Sets up the Artemis core protocol connection factory
-        ActiveMQConnectionFactory connectionFactory = new ActiveMQConnectionFactory("tcp://localhost:61616");
+        ActiveMQConnectionFactory connectionFactory = new ActiveMQConnectionFactory("tcp://gp-cluster-hdls-svc.amq-broker:61616");
 
         JmsConfiguration configuration = new JmsConfiguration();
         configuration.setConnectionFactory(connectionFactory);
